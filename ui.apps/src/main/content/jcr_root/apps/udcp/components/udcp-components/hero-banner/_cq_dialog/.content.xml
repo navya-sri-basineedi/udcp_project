@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="/libs/cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/libs/granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <contentTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <backgroundImage
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield"
+                                fieldDescription="Select the university banner image from DAM"
+                                fieldLabel="Background Image"
+                                name="./backgroundImage"
+                                required="{Boolean}false"
+                                rootPath="/content/dam"/>
+                            <headline
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                                emptyText="Enter banner headline"
+                                fieldDescription="Enter the main heading for the university banner"
+                                fieldLabel="Headline"
+                                name="./headline"
+                                required="{Boolean}true"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                                emptyText="Enter banner description"
+                                fieldDescription="Enter a short introduction for the banner"
+                                fieldLabel="Description"
+                                name="./description"
+                                rows="{Long}3"/>
+                        </items>
+                    </contentTab>
+                    <actionTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Call to Action"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <buttonLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                                emptyText="Explore Courses"
+                                fieldLabel="Button Label"
+                                name="./buttonLabel"/>
+                            <buttonLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Button Link"
+                                name="./buttonLink"
+                                rootPath="/content/udcp"/>
+                        </items>
+                    </actionTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

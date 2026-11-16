@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="University Info"
+    sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+    <items jcr:primaryType="nt:unstructured">
+        <universityName
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+            emptyText="UDCP University"
+            fieldLabel="University Name"
+            name="./universityName"/>
+        <description
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+            emptyText="A short introduction about our university"
+            fieldLabel="University Description"
+            name="./description"
+            rows="{Long}3"/>
+        <copyrightText
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+            emptyText="(c) 2026 UDCP University. All rights reserved."
+            fieldLabel="Copyright Text"
+            name="./copyrightText"/>
+    </items>
+</jcr:root>

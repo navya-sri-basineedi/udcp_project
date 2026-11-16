@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="/libs/cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/libs/granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <contentTab
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Content"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <heading
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Enter section heading"
+                                fieldLabel="Heading"
+                                name="./heading"/>
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                                fieldDescription="Enter course description"
+                                fieldLabel="Description"
+                                name="./description"/>
+                            <highlights
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="/libs/granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Course Highlights">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="/libs/granite/ui/components/coral/foundation/container"
+                                    name="./highlights">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <highlight
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Highlight"
+                                            name="./highlight"/>
+                                        <duration
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                                            emptyText="4 Years"
+                                            fieldLabel="Course Duration"
+                                            name="./duration"/>
+                                        <fees
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Course Fees(INR)"
+                                            min="{Long}0"
+                                            name="./fees"
+                                            step="{Long}1000"/>
+                                    </items>
+                                </field>
+                            </highlights>
+                        </items>
+                    </contentTab>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

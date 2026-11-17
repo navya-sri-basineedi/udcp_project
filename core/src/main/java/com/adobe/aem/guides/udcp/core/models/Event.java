@@ -5,5 +5,5 @@ public interface Event {
     String getEventDate();
     String getEventLocation();
     String getEventDescription();
-    
+    String getEventLink();
 }

@@ -1,0 +1,365 @@
+.faculty-profile {
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0.25rem;
+    background-color: #F6F3EC;
+}
+
+.faculty-profile__intro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--faculty-intro-span, 300%);
+    min-height: var(--faculty-intro-space, 9rem);
+    box-sizing: border-box;
+    margin: 0 0 1rem;
+    padding: 0.75rem 0.5rem 0;
+    z-index: 2;
+    text-align: center;
+}
+
+.faculty-profile__eyebrow {
+    margin: 0 0 0.5rem;
+    color: #C5A66B;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.5;
+}
+
+.faculty-profile__heading {
+    margin: 0 0 0.5rem;
+    color: #142B49;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 2vw, 1.75rem);
+    line-height: 1.2;
+}
+
+.faculty-profile__description {
+    max-width: 34rem;
+    margin: 0 auto;
+    color: #596574;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.faculty-profile__intro--scrolling {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 1.5rem 1rem 1rem;
+    z-index: auto;
+    background-color: #F6F3EC;
+}
+
+.cmp-container:has(> .aem-Grid > .faculty-profile__cards) > .aem-Grid {
+    display: block;
+    grid-template-columns: none;
+}
+
+.faculty-profile__cards {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 0.75rem 1rem 1.5rem;
+    background-color: #F6F3EC;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-padding-inline: 1rem;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.faculty-profile__cards > .faculty-profile.aem-GridColumn {
+    display: flex;
+    flex: 0 0 360px;
+    float: none;
+    clear: none;
+    height: auto;
+    width: 360px;
+    max-width: none;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-self: stretch;
+    scroll-snap-align: start;
+}
+
+.faculty-profile__cards > .faculty-profile.aem-GridColumn > .faculty-profile {
+    display: flex;
+    height: auto;
+    flex: 1 1 auto;
+    flex-direction: column;
+}
+
+.faculty-profile__cards .faculty-profile__card {
+    height: auto;
+    flex: 1;
+    margin: 0;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile > .faculty-profile__intro) > .aem-Grid {
+    --faculty-intro-span: 300%;
+    --faculty-intro-space: 9rem;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid::before,
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid::after {
+    display: none;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid > .aem-GridColumn:not(:has(> .faculty-profile)) {
+    grid-column: 1 / -1;
+    float: none;
+    clear: none;
+    width: auto;
+    max-width: 100%;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid > .aem-GridColumn:has(> .faculty-profile) {
+    display: flex;
+    float: none;
+    clear: none;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile > .faculty-profile__intro) > .aem-Grid > .aem-GridColumn:has(> .faculty-profile > .faculty-profile__intro) {
+    position: relative;
+}
+
+.cmp-container:has(> .aem-GridColumn > .faculty-profile > .faculty-profile__intro) > .aem-GridColumn:has(> .faculty-profile > .faculty-profile__intro) {
+    display: contents;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile > .faculty-profile__intro) > .aem-Grid > .aem-GridColumn > .faculty-profile:has(> .faculty-profile__intro) {
+    height: auto;
+    padding-top: var(--faculty-intro-space);
+}
+
+.cmp-container:has(> .faculty-profile > .faculty-profile__intro) > .faculty-profile:has(> .faculty-profile__intro) {
+    display: contents;
+}
+
+.cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid > .aem-GridColumn:has(> .faculty-profile),
+.cmp-container:has(> .aem-GridColumn > .faculty-profile) > .aem-GridColumn:has(> .faculty-profile),
+.cmp-container:has(> .faculty-profile) > .faculty-profile {
+    grid-column: auto / span 1;
+}
+
+.faculty-profile:has(> .faculty-profile__intro) > .faculty-profile__card {
+    height: auto;
+    margin: 0.25rem;
+}
+
+.cmp-container:has(> .faculty-profile) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+}
+
+.cmp-container:has(> .faculty-profile) > :not(.faculty-profile) {
+    grid-column: 1 / -1;
+    width: auto;
+    max-width: 100%;
+}
+
+.cmp-container:has(> .aem-GridColumn > .faculty-profile) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    width: 100%;
+}
+
+.cmp-container:has(> .aem-GridColumn > .faculty-profile) > .aem-GridColumn:not(:has(> .faculty-profile)) {
+    grid-column: 1 / -1;
+    float: none;
+    clear: none;
+    width: auto;
+    max-width: 100%;
+}
+
+.cmp-container:has(> .aem-GridColumn > .faculty-profile) > .aem-GridColumn:has(> .faculty-profile) {
+    display: flex;
+    float: none;
+    clear: none;
+    width: auto;
+    min-width: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.faculty-profile__card {
+    display: flex;
+    height: 100%;
+    min-width: 0;
+    grid-column: auto / span 1;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(20, 43, 73, 0.1);
+    border-radius: 0.75rem;
+    background-color: #FFFFFF;
+    box-shadow: 0 0.5rem 1.5rem rgba(20, 43, 73, 0.08);
+    transition: box-shadow 180ms ease, transform 180ms ease;
+
+    &:hover {
+        box-shadow: 0 0.9rem 2rem rgba(20, 43, 73, 0.14);
+        transform: translateY(-4px);
+    }
+}
+
+.faculty-image {
+    display: flex;
+    width: 100%;
+    height: 190px;
+    flex: 0 0 190px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #E8E2D6;
+}
+
+.faculty-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.faculty-details {
+    display: flex;
+    min-width: 0;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.15rem;
+}
+
+.faculty-name {
+    margin: 0 0 0.4rem;
+    color: #142B49;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+.faculty-designation {
+    margin: 0 0 0.25rem;
+    color: #A8874D;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.faculty-school {
+    margin: 0 0 0.75rem;
+    color: #C5A66B;
+    font-size: 0.84rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.faculty-qualifications {
+    margin: 0 0 0.7rem;
+    color: #596574;
+    font-size: 0.86rem;
+    line-height: 1.5;
+}
+
+.faculty-qualifications strong {
+    color: #142B49;
+    font-weight: 700;
+}
+
+.faculty-bio {
+    margin: 0;
+    color: #4F5B69;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+    .faculty-profile__cards > .faculty-profile.aem-GridColumn {
+        flex-basis: 320px;
+        width: 320px;
+    }
+
+    .cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid {
+        --faculty-intro-span: 200%;
+        --faculty-intro-space: 10rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cmp-container:has(> .faculty-profile),
+    .cmp-container:has(> .aem-GridColumn > .faculty-profile) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .faculty-profile__cards {
+        gap: 0.9rem;
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+        scroll-padding-inline: 0.75rem;
+    }
+
+    .faculty-profile__cards > .faculty-profile.aem-GridColumn {
+        flex-basis: 280px;
+        width: 280px;
+    }
+
+    .cmp-container:has(> .aem-Grid > .aem-GridColumn > .faculty-profile) > .aem-Grid {
+        --faculty-intro-span: 100%;
+        --faculty-intro-space: 12rem;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .cmp-container:has(> .faculty-profile),
+    .cmp-container:has(> .aem-GridColumn > .faculty-profile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .faculty-details {
+        padding: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .faculty-profile__cards {
+        scroll-behavior: auto;
+        scroll-snap-type: x proximity;
+    }
+
+    .faculty-profile__card {
+        transition: none;
+
+        &:hover {
+            transform: none;
+        }
+    }
+}

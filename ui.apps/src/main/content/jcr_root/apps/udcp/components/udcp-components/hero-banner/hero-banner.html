@@ -1,1 +1,18 @@
-<h3> Hero </h3>
+
+<sly data-sly-use.hero="com.adobe.aem.guides.udcp.core.models.Hero" />
+
+<section class="hero-banner"
+         style="background-image: url('${hero.backgroundImage @ context='uri'}');">
+
+    <div class="hero-content">
+        <p class="hero-eyebrow">DISCOVER YOUR FUTURE</p>
+        <h1>${hero.headline}</h1>
+        <p class="hero-description">${hero.description}</p>
+
+        <a href="${hero.buttonLink @ extension='html'}"
+           class="hero-button"
+           data-sly-test="${hero.buttonLabel}">
+            ${hero.buttonLabel}
+        </a>
+    </div>
+</section>

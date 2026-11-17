@@ -25,6 +25,7 @@
                         sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Link Path"
                         name="./link"
+                        required="{Boolean}true"
                         rootPath="/content"/>
                 </items>
             </field>

@@ -1,1 +1,23 @@
-<h3>Footer </h3>
+<sly data-sly-use.footer="com.adobe.aem.guides.udcp.core.models.Footer" />
+
+<footer class="udcp-footer">
+    <div class="udcp-footer__content">
+        <section class="udcp-footer__identity" aria-label="University information">
+            <h2 class="udcp-footer__name" data-sly-test="${footer.universityName}">${footer.universityName}</h2>
+            <p class="udcp-footer__tagline" data-sly-test="${footer.description}">${footer.description}</p>
+        </section>
+
+        <nav class="udcp-footer__navigation" aria-label="Footer navigation" data-sly-test="${footer.quickLinks}">
+            <h3 class="udcp-footer__navigation-title">Quick Links</h3>
+            <ul class="udcp-footer__links" data-sly-list.item="${footer.quickLinks}">
+                <li class="udcp-footer__link-item" data-sly-test="${item.label}">
+                    <a class="udcp-footer__link" href="${item.link @ extension='html'}">${item.label}</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="udcp-footer__bottom" data-sly-test="${footer.copyrightText}">
+        <p class="udcp-footer__copyright">${footer.copyrightText}</p>
+    </div>
+</footer>

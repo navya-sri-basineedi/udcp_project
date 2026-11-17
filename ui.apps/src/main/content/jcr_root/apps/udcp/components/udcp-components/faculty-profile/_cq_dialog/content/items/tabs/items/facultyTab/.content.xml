@@ -4,59 +4,72 @@
     jcr:title="Faculty Details"
     sling:resourceType="/libs/granite/ui/components/coral/foundation/container">
     <items jcr:primaryType="nt:unstructured">
-        <facultyName
+        <facultyMembers
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="Enter faculty name"
-            fieldLabel="Faculty Name"
-            name="./facultyName"
-            required="{Boolean}true"/>
-        <designation
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="e.g.Professor,Associate Professor"
-            fieldLabel="Designation"
-            name="./designation"/>
-        <school
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/select"
-            emptyText="Select School"
-            fieldLabel="School"
-            name="./school">
-            <items jcr:primaryType="nt:unstructured">
-                <engineering
-                    jcr:primaryType="nt:unstructured"
-                    text="Engineering"
-                    value="Engineering"/>
-                <management
-                    jcr:primaryType="nt:unstructured"
-                    text="Management"
-                    value="Management"/>
-                <design
-                    jcr:primaryType="nt:unstructured"
-                    text="Design"
-                    value="Design"/>
-            </items>
-        </school>
-        <facultyPhoto
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield"
-            fieldLabel="Faculty Photo"
-            name="./facultyPhoto"
-            rootPath="/content/dam"/>
-        <qualifications
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
-            emptyText="e.g.Ph.D. in Computer Science"
-            fieldLabel="Qualifications"
-            name="./qualifications"
-            rows="{Long}3"/>
-        <bio
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
-            emptyText="Write a brief introduction about the faculty member"
-            fieldLabel="Short Biography"
-            name="./bio"
-            rows="{Long}4"/>
+            sling:resourceType="/libs/granite/ui/components/coral/foundation/form/multifield"
+            composite="{Boolean}true"
+            fieldLabel="Faculty Members">
+            <field
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="/libs/granite/ui/components/coral/foundation/container"
+                name="./facultyMembers">
+                <items jcr:primaryType="nt:unstructured">
+                    <facultyName
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="Enter faculty name"
+                        fieldLabel="Faculty Name"
+                        name="./facultyName"
+                        required="{Boolean}true"/>
+                    <designation
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="e.g. Professor, Associate Professor"
+                        fieldLabel="Designation"
+                        name="./designation"/>
+                    <school
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/select"
+                        emptyText="Select School"
+                        fieldLabel="School"
+                        name="./school">
+                        <items jcr:primaryType="nt:unstructured">
+                            <engineering
+                                jcr:primaryType="nt:unstructured"
+                                text="Engineering"
+                                value="Engineering"/>
+                            <management
+                                jcr:primaryType="nt:unstructured"
+                                text="Management"
+                                value="Management"/>
+                            <design
+                                jcr:primaryType="nt:unstructured"
+                                text="Design"
+                                value="Design"/>
+                        </items>
+                    </school>
+                    <facultyPhoto
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Faculty Photo"
+                        name="./facultyPhoto"
+                        rootPath="/content/dam"/>
+                    <qualifications
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                        emptyText="e.g. Ph.D. in Computer Science"
+                        fieldLabel="Qualifications"
+                        name="./qualifications"
+                        rows="{Long}3"/>
+                    <bio
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
+                        emptyText="Write a brief introduction about the faculty member"
+                        fieldLabel="Short Biography"
+                        name="./bio"
+                        rows="{Long}4"/>
+                </items>
+            </field>
+        </facultyMembers>
     </items>
 </jcr:root>

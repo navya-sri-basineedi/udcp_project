@@ -13,22 +13,70 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="udcp/components/container"
             layout="simple">
-            <navigation
+            <universityHeader
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="udcp/components/navigation"
-                collectAllPages="false"
-                navigationRoot="/content/udcp/us/en"
-                skipNavigationRoot="false"
-                structureDepth="1"/>
-            <languagenavigation
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="udcp/components/languagenavigation"
-                navigationRoot="/content/udcp/us"
-                structureDepth="2"/>
-            <search
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="udcp/components/search"
-                searchRoot="/content/udcp/us"/>
+                sling:resourceType="/apps/udcp/components/udcp-components/header"
+                logo="/content/experience-fragments/udcp/us/en/site/header/master/_jcr_content/root/logo/logo.svg"
+                universityName="Campus Connect University"
+                tagline="Learn Beyond Limits. Lead Beyond Boundaries."
+                buttonLabel="Join Our Community">
+                <navigationLinks jcr:primaryType="nt:unstructured">
+                    <item0
+                        jcr:primaryType="nt:unstructured"
+                        label="Home"
+                        link="/content/udcp/us/en"/>
+                    <item1
+                        jcr:primaryType="nt:unstructured"
+                        label="About Us"/>
+                    <item2
+                        jcr:primaryType="nt:unstructured"
+                        label="Academics"/>
+                    <item4
+                        jcr:primaryType="nt:unstructured"
+                        label="Faculty"/>
+                    <item5
+                        jcr:primaryType="nt:unstructured"
+                        label="Campus Life"/>
+                    <item6
+                        jcr:primaryType="nt:unstructured"
+                        label="Events"/>
+                    <item7
+                        jcr:primaryType="nt:unstructured"
+                        label="Visit Us"/>
+                    <item8
+                        jcr:primaryType="nt:unstructured"
+                        label="All Courses"
+                        parentLabel="Academics"/>
+                    <item9
+                        jcr:primaryType="nt:unstructured"
+                        label="Engineering"
+                        parentLabel="Academics"/>
+                    <item10
+                        jcr:primaryType="nt:unstructured"
+                        label="Management"
+                        parentLabel="Academics"/>
+                    <item11
+                        jcr:primaryType="nt:unstructured"
+                        label="Design"
+                        parentLabel="Academics"/>
+                </navigationLinks>
+                <navigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/navigation"
+                    collectAllPages="false"
+                    navigationRoot="/content/udcp/us/en"
+                    skipNavigationRoot="false"
+                    structureDepth="2"/>
+                <languagenavigation
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/languagenavigation"
+                    navigationRoot="/content/udcp/us"
+                    structureDepth="2"/>
+                <search
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/search"
+                    searchRoot="/content/udcp/us"/>
+            </universityHeader>
         </root>
     </jcr:content>
 </jcr:root>

@@ -1,1 +1,36 @@
-<h3> Events </h3>
+<sly data-sly-use.events="com.adobe.aem.guides.udcp.core.models.Events" />
+
+<section class="upcoming-events">
+    <header class="upcoming-events__intro">
+        <h2 class="upcoming-events__heading">Campus Life &amp; Upcoming Events</h2>
+        <p class="upcoming-events__subtitle">Discover what's happening across our university.</p>
+    </header>
+
+    <div class="upcoming-events__track"
+         role="list"
+         aria-label="Upcoming university events"
+         tabindex="0"
+         data-sly-list.event="${events.events}">
+        <article class="upcoming-events__card" role="listitem">
+            <h3 class="upcoming-events__title">${event.eventTitle}</h3>
+
+            <time class="upcoming-events__date"
+                  datetime="${event.eventDate}"
+                  data-event-date="${event.eventDate}"
+                  data-sly-test="${event.eventDate}">${event.eventDate}</time>
+
+            <p class="upcoming-events__location" data-sly-test="${event.eventLocation}">
+                <span class="upcoming-events__location-label">Location:</span>
+                ${event.eventLocation}
+            </p>
+
+            <p class="upcoming-events__description" data-sly-test="${event.eventDescription}">
+                ${event.eventDescription}
+            </p>
+
+            <a class="upcoming-events__link"
+               href="${event.eventLink}"
+               data-sly-test="${event.eventLink}">View Details</a>
+        </article>
+    </div>
+</section>

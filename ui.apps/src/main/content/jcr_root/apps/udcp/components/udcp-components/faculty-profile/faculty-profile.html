@@ -1,1 +1,43 @@
-<h3> Faculty </h3>
+
+<sly data-sly-template.facultyCard="${ @ profile }">
+    <article class="faculty-profile__card">
+        <div class="faculty-image" data-sly-test="${profile.facultyPhoto}">
+            <img src="${profile.facultyPhoto}"
+                 alt="${profile.facultyName}"
+                 class="faculty-photo">
+        </div>
+
+        <div class="faculty-details">
+            <h2 class="faculty-name" data-sly-test="${profile.facultyName}">${profile.facultyName}</h2>
+            <h3 class="faculty-designation" data-sly-test="${profile.designation}">${profile.designation}</h3>
+            <p class="faculty-school" data-sly-test="${profile.school}">School of ${profile.school}</p>
+            <p class="faculty-qualifications" data-sly-test="${profile.qualifications}">
+                <strong>Qualifications:</strong>
+                ${profile.qualifications}
+            </p>
+            <p class="faculty-bio" data-sly-test="${profile.bio}">${profile.bio}</p>
+        </div>
+    </article>
+</sly>
+
+<sly data-sly-use.faculty="com.adobe.aem.guides.udcp.core.models.Faculty" />
+
+<section class="faculty-profile">
+   
+
+    <div class="faculty-profile__cards"
+         data-sly-test="${faculty.composite}"
+         role="region"
+         aria-label="Faculty profiles"
+         tabindex="0">
+        <div class="faculty-profile aem-GridColumn" data-sly-list.profile="${faculty.facultyMembers}">
+            <sly data-sly-call="${facultyCard @ profile=profile}"></sly>
+        </div>
+    </div>
+
+    <sly data-sly-test="${!faculty.composite}">
+        <sly data-sly-test="${faculty.facultyName}">
+            <sly data-sly-call="${facultyCard @ profile=faculty}"></sly>
+        </sly>
+    </sly>
+</section>

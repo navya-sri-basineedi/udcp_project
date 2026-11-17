@@ -38,6 +38,9 @@ public class HeaderImpl implements Header {
  
     @ValueMapValue
     private String buttonLink;
+
+    @ValueMapValue
+    private String signInLink;
  
     @Override
     public String getLogo() {
@@ -67,5 +70,10 @@ public class HeaderImpl implements Header {
     @Override
     public String getButtonLink() {
         return buttonLink;
+    }
+
+    @Override
+    public String getSignInLink() {
+        return signInLink;
     }
 }

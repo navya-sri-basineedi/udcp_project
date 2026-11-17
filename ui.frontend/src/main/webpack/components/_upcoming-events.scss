@@ -1,0 +1,154 @@
+.upcoming-events {
+    width: 100%;
+    box-sizing: border-box;
+    padding: clamp(2.5rem, 5vw, 4rem) 1rem;
+    background-color: #F6F3EC;
+}
+
+.upcoming-events__intro {
+    max-width: 46rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.upcoming-events__heading {
+    margin: 0 0 0.65rem;
+    color: #142B49;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    line-height: 1.2;
+}
+
+.upcoming-events__subtitle {
+    margin: 0;
+    color: #596574;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.upcoming-events__track {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem 0.25rem 1.25rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-behavior: smooth;
+    scrollbar-color: #C5A66B #E8E3D8;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: #E8E3D8;
+        border-radius: 999px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #C5A66B;
+        border-radius: 999px;
+    }
+}
+
+.upcoming-events__card {
+    display: flex;
+    flex: 0 0 clamp(17rem, 30vw, 23rem);
+    flex-direction: column;
+    min-width: 0;
+    min-height: 18rem;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: 1px solid rgba(20, 43, 73, 0.1);
+    border-top: 4px solid #C5A66B;
+    border-radius: 0.9rem;
+    background-color: #fff;
+    box-shadow: 0 0.35rem 1.2rem rgba(20, 43, 73, 0.09);
+    scroll-snap-align: start;
+}
+
+.upcoming-events__title {
+    margin: 0 0 1rem;
+    color: #142B49;
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.upcoming-events__date {
+    margin-bottom: 0.8rem;
+    color: #8A6A32;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.upcoming-events__location {
+    margin: 0 0 0.8rem;
+    color: #39495B;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.upcoming-events__location-label {
+    color: #142B49;
+    font-weight: 700;
+}
+
+.upcoming-events__description {
+    margin: 0 0 1.25rem;
+    color: #596574;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.upcoming-events__link {
+    align-self: flex-start;
+    margin-top: auto;
+    color: #142B49;
+    font-weight: 700;
+    text-decoration-color: #C5A66B;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+        color: #8A6A32;
+    }
+
+    &:focus-visible {
+        outline: 2px solid #142B49;
+        outline-offset: 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .upcoming-events__card {
+        flex-basis: min(78vw, 22rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .upcoming-events {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .upcoming-events__intro {
+        margin-bottom: 1.5rem;
+    }
+
+    .upcoming-events__card {
+        flex-basis: min(88vw, 22rem);
+        padding: 1.25rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .upcoming-events__track {
+        scroll-behavior: auto;
+    }
+}

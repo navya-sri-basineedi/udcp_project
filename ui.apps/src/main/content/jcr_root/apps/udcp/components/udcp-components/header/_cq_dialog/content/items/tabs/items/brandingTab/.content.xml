@@ -13,14 +13,14 @@
         <universityName
             jcr:primaryType="nt:unstructured"
             sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="UDCP University"
+            emptyText="Campus Connect University"
             fieldLabel="University Name"
             name="./universityName"
             required="{Boolean}true"/>
         <tagline
             jcr:primaryType="nt:unstructured"
             sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="Learn.Lead.Transform"
+            emptyText="Learn Beyond Limits. Lead Beyond Boundaries."
             name="./tagline"/>
     </items>
 </jcr:root>

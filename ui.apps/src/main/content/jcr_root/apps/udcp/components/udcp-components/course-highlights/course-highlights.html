@@ -1,1 +1,28 @@
-<h3> Course highlights </h3>
+
+
+<sly data-sly-use.course="com.adobe.aem.guides.udcp.core.models.Course" />
+
+<section class="course-highlights">
+    <div class="course-highlights__inner">
+        <header class="course-highlights__intro">
+            <h2 class="course-highlights__heading">${course.heading}</h2>
+            <p class="course-highlights__description">${course.description}</p>
+        </header>
+
+        <div class="course-highlights__grid" data-sly-list.item="${course.highlights}">
+            <article class="course-highlight">
+                <h3>${item.highlight}</h3>
+                <dl class="course-highlight__details">
+                    <div class="course-highlight__detail">
+                        <dt>Duration</dt>
+                        <dd>${item.duration}</dd>
+                    </div>
+                    <div class="course-highlight__detail">
+                        <dt>Annual fees</dt>
+                        <dd>${item.fees}</dd>
+                    </div>
+                </dl>
+            </article>
+        </div>
+    </div>
+</section>

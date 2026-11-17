@@ -3,4 +3,4 @@
     jcr:description="University website footer with useful links"
     jcr:primaryType="cq:Component"
     jcr:title="UDCP Footer"
-    componentGroup="UDCP Project-Structure"/>
+    componentGroup="UDCP Project - Content"/>

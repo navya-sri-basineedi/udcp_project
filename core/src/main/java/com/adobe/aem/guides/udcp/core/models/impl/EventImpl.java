@@ -26,6 +26,9 @@ public class EventImpl implements Event {
     @ValueMapValue
     private String eventDescription;
  
+    @ValueMapValue
+    private String eventLink;
+
     @Override
     public String getEventTitle() {
         return eventTitle;
@@ -44,6 +47,11 @@ public class EventImpl implements Event {
     @Override
     public String getEventDescription() {
         return eventDescription;
+    }
+
+    @Override
+    public String getEventLink() {
+        return eventLink;
     }
 }
  

@@ -15,5 +15,7 @@ public interface Header {
     String getButtonLabel();
  
     String getButtonLink();
+
+    String getSignInLink();
 }
  

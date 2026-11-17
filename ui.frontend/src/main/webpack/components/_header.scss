@@ -1,0 +1,518 @@
+.udcp-header {
+    --udcp-header-navy: #142B49;
+    --udcp-header-gold: #C5A66B;
+    --udcp-header-ivory: #F6F3EC;
+    box-sizing: border-box;
+    grid-column: 1 / -1;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    padding: 1rem 2rem;
+    color: var(--udcp-header-ivory);
+    background: var(--udcp-header-navy);
+    border-bottom: 1px solid var(--udcp-header-gold);
+    box-shadow: 0 3px 14px rgba(20, 43, 73, 0.2);
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+}
+
+.udcp-header__layout {
+    display: grid;
+    grid-template-columns: minmax(230px, 1fr) auto auto;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.udcp-header__brand {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.udcp-header__logo {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+.udcp-header__brand-copy {
+    min-width: 0;
+}
+
+.udcp-header__name,
+.udcp-header__tagline {
+    margin: 0;
+}
+
+.udcp-header__name {
+    color: var(--udcp-header-ivory);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.udcp-header__tagline {
+    margin-top: 0.2rem;
+    color: rgba(246, 243, 236, 0.82);
+    font-size: 0.72rem;
+    line-height: 1.35;
+}
+
+.udcp-header__menu {
+    display: contents;
+}
+
+.udcp-header__menu-toggle {
+    display: none;
+}
+
+.udcp-header__navigation {
+    grid-column: 2;
+}
+
+.udcp-header__nav-list,
+.udcp-header__submenu-list,
+.udcp-header__navigation .cmp-navigation__group {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.udcp-header__nav-list,
+.udcp-header__navigation .cmp-navigation > .cmp-navigation__group {
+    display: flex;
+    align-items: center;
+    gap: 0.78rem;
+}
+
+.udcp-header__nav-item,
+.udcp-header__navigation .cmp-navigation__item {
+    position: relative;
+}
+
+.udcp-header a.udcp-header__nav-link,
+.udcp-header .udcp-header__nav-link,
+.udcp-header .cmp-navigation__item-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.5rem;
+    padding: 0.4rem 0;
+    color: var(--udcp-header-ivory);
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.udcp-header a.udcp-header__nav-link::after,
+.udcp-header a.udcp-header__nav-link[aria-current="page"]::after,
+.udcp-header .cmp-navigation__item--active > .cmp-navigation__item-link::after {
+    position: absolute;
+    right: 0;
+    bottom: 0.1rem;
+    left: 0;
+    height: 2px;
+    background: var(--udcp-header-gold);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 160ms ease;
+}
+
+.udcp-header a.udcp-header__nav-link:hover::after,
+.udcp-header a.udcp-header__nav-link:focus-visible::after,
+.udcp-header a.udcp-header__nav-link[aria-current="page"]::after,
+.udcp-header .cmp-navigation__item:hover > .cmp-navigation__item-link::after,
+.udcp-header .cmp-navigation__item:focus-within > .cmp-navigation__item-link::after,
+.udcp-header .cmp-navigation__item--active > .cmp-navigation__item-link::after {
+    transform: scaleX(1);
+}
+
+.udcp-header a.udcp-header__nav-link:hover,
+.udcp-header a.udcp-header__nav-link:focus-visible,
+.udcp-header .udcp-header__nav-link:hover,
+.udcp-header .udcp-header__nav-link:focus-visible {
+    color: var(--udcp-header-gold);
+}
+
+.udcp-header__nav-item-main {
+    display: flex;
+    align-items: center;
+}
+
+.udcp-header__submenu {
+    position: relative;
+}
+
+.udcp-header__submenu-toggle {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.45rem;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+}
+
+.udcp-header__submenu-toggle::-webkit-details-marker,
+.udcp-header__menu-toggle::-webkit-details-marker {
+    display: none;
+}
+
+.udcp-header .udcp-header__submenu-toggle:hover,
+.udcp-header .udcp-header__submenu-toggle:focus-visible {
+    color: var(--udcp-header-gold);
+}
+
+.udcp-header__submenu-toggle::after {
+    flex: 0 0 auto;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-right: 1.5px solid var(--udcp-header-gold);
+    border-bottom: 1.5px solid var(--udcp-header-gold);
+    content: "";
+    transform: translateY(-0.12rem) rotate(45deg);
+    transition: transform 160ms ease;
+}
+
+.udcp-header__submenu[open] > .udcp-header__submenu-toggle::after {
+    transform: translateY(0.1rem) rotate(225deg);
+}
+
+.udcp-header__submenu-list,
+.udcp-header__navigation .cmp-navigation__item--level-0 > .cmp-navigation__group {
+    position: absolute;
+    top: 100%;
+    left: -0.75rem;
+    z-index: 30;
+    display: none;
+    min-width: 13rem;
+    padding: 0.45rem;
+    background: #1B3658;
+    border: 1px solid var(--udcp-header-gold);
+    border-radius: 0.35rem;
+    box-shadow: 0 10px 24px rgba(10, 25, 43, 0.3);
+}
+
+.udcp-header__submenu[open] > .udcp-header__submenu-list {
+    animation: udcp-header-dropdown-in 180ms ease-out both;
+}
+
+.udcp-header__submenu[open] > .udcp-header__submenu-list,
+.udcp-header__navigation .cmp-navigation__item--level-0:hover > .cmp-navigation__group,
+.udcp-header__navigation .cmp-navigation__item--level-0:focus-within > .cmp-navigation__group {
+    display: block;
+}
+
+@keyframes udcp-header-dropdown-in {
+    from {
+        opacity: 0;
+        transform: translateY(-0.35rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.udcp-header .udcp-header__submenu-link,
+.udcp-header .cmp-navigation__item--level-1 > .cmp-navigation__item-link {
+    display: block;
+    padding: 0.65rem 0.75rem;
+    color: var(--udcp-header-ivory);
+    font-size: 0.88rem;
+    line-height: 1.35;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.udcp-header a.udcp-header__submenu-link:hover,
+.udcp-header a.udcp-header__submenu-link:focus-visible,
+.udcp-header .cmp-navigation__item--level-1 > .cmp-navigation__item-link:hover,
+.udcp-header .cmp-navigation__item--level-1 > .cmp-navigation__item-link:focus-visible {
+    color: var(--udcp-header-gold);
+    background: #244466;
+    text-decoration: none;
+}
+
+.udcp-header__actions,
+.udcp-header__utilities {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+}
+
+.udcp-header__actions {
+    grid-column: 3;
+    justify-self: end;
+}
+
+.udcp-header a.udcp-header__button,
+.udcp-header .udcp-header__button {
+    display: inline-flex;
+    min-height: 2.55rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid var(--udcp-header-gold);
+    border-radius: 0.3rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.udcp-header a.udcp-header__button--outline,
+.udcp-header .udcp-header__button--outline {
+    color: var(--udcp-header-ivory);
+    background: transparent;
+    border-color: rgba(246, 243, 236, 0.75);
+}
+
+.udcp-header a.udcp-header__button--primary,
+.udcp-header .udcp-header__button--primary {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: var(--udcp-header-navy);
+    background: var(--udcp-header-gold);
+    border-bottom: 3px solid #D6BB8D;
+}
+
+.udcp-header a.udcp-header__button:hover,
+.udcp-header a.udcp-header__button:focus-visible {
+    box-shadow: 0 0 0 3px rgba(197, 166, 107, 0.35);
+}
+
+.udcp-header .udcp-header__utilities a,
+.udcp-header .udcp-header__utilities button {
+    color: var(--udcp-header-ivory);
+}
+
+.udcp-header .udcp-header__utilities a:hover,
+.udcp-header .udcp-header__utilities a:focus-visible {
+    color: var(--udcp-header-gold);
+}
+
+.udcp-header__utilities .cmp-search__field {
+    margin: 0;
+}
+
+.udcp-header__utilities .cmp-search__input {
+    width: 8rem;
+    min-width: 0;
+}
+
+.udcp-header__utilities .cmp-languagenavigation {
+    margin-left: 0.2rem;
+}
+
+.udcp-header__visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@media (min-width: 1351px) {
+    .udcp-header__menu:not([open]) .udcp-header__navigation {
+        display: block;
+    }
+}
+
+@media (max-width: 1350px) {
+    .udcp-header {
+        padding: 0.9rem 1.5rem;
+    }
+
+    .udcp-header__layout {
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 0.85rem 1rem;
+    }
+
+    .udcp-header__menu {
+        position: relative;
+        display: block;
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .udcp-header__menu-toggle {
+        display: flex;
+        width: 2.75rem;
+        height: 2.75rem;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        list-style: none;
+        border: 1px solid rgba(246, 243, 236, 0.55);
+        border-radius: 0.3rem;
+        background: transparent;
+    }
+
+    .udcp-header__hamburger,
+    .udcp-header__hamburger::before,
+    .udcp-header__hamburger::after {
+        position: absolute;
+        display: block;
+        width: 1.15rem;
+        height: 2px;
+        background: var(--udcp-header-ivory);
+        content: "";
+    }
+
+    .udcp-header__hamburger::before {
+        transform: translateY(-0.36rem);
+    }
+
+    .udcp-header__hamburger::after {
+        transform: translateY(0.36rem);
+    }
+
+    .udcp-header__menu[open] > .udcp-header__menu-toggle .udcp-header__hamburger {
+        background: transparent;
+    }
+
+    .udcp-header__menu[open] > .udcp-header__menu-toggle .udcp-header__hamburger::before {
+        transform: rotate(45deg);
+    }
+
+    .udcp-header__menu[open] > .udcp-header__menu-toggle .udcp-header__hamburger::after {
+        transform: rotate(-45deg);
+    }
+
+    .udcp-header__navigation,
+    .udcp-header__menu:not([open]) .udcp-header__navigation {
+        position: absolute;
+        top: calc(100% + 0.75rem);
+        right: 0;
+        z-index: 40;
+        display: none;
+        width: min(90vw, 26rem);
+        max-height: calc(100vh - 7rem);
+        padding: 0.75rem;
+        overflow: auto;
+        background: var(--udcp-header-navy);
+        border: 1px solid var(--udcp-header-gold);
+        border-radius: 0.4rem;
+        box-shadow: 0 12px 28px rgba(10, 25, 43, 0.35);
+    }
+
+    .udcp-header__menu[open] .udcp-header__navigation {
+        display: block;
+    }
+
+    .udcp-header__nav-list,
+    .udcp-header__navigation .cmp-navigation > .cmp-navigation__group {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .udcp-header .udcp-header__nav-link,
+    .udcp-header .cmp-navigation__item-link {
+        width: 100%;
+        padding: 0.7rem 0.65rem;
+        font-size: 0.95rem;
+    }
+
+    .udcp-header__nav-item-main {
+        justify-content: space-between;
+    }
+
+    .udcp-header__submenu-list,
+    .udcp-header__navigation .cmp-navigation__item--level-0 > .cmp-navigation__group {
+        position: static;
+        min-width: 0;
+        margin: 0 0 0.5rem 0.75rem;
+        padding: 0 0 0 0.45rem;
+        border: 0;
+        border-left: 2px solid var(--udcp-header-gold);
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .udcp-header__actions {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-self: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 520px) {
+    .udcp-header {
+        padding: 0.75rem 1rem;
+    }
+
+    .udcp-header__logo {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .udcp-header__name {
+        font-size: 0.98rem;
+    }
+
+    .udcp-header__tagline {
+        font-size: 0.66rem;
+    }
+
+    .udcp-header__actions {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .udcp-header__actions > .udcp-header__button {
+        width: 100%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .udcp-header__utilities {
+        grid-column: 1 / -1;
+        justify-content: center;
+    }
+
+    .udcp-header__utilities .cmp-search {
+        flex: 1;
+        max-width: 16rem;
+    }
+
+    .udcp-header__utilities .cmp-search__input {
+        width: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .udcp-header *,
+    .udcp-header *::before,
+    .udcp-header *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}

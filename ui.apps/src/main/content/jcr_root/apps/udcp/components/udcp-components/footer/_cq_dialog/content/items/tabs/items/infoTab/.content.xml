@@ -7,20 +7,20 @@
         <universityName
             jcr:primaryType="nt:unstructured"
             sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="UDCP University"
+            emptyText="Campus Connect University"
             fieldLabel="University Name"
             name="./universityName"/>
         <description
             jcr:primaryType="nt:unstructured"
             sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textarea"
-            emptyText="A short introduction about our university"
-            fieldLabel="University Description"
+            emptyText="Empowering students through knowledge, innovation and opportunities."
+            fieldLabel="Tagline"
             name="./description"
             rows="{Long}3"/>
         <copyrightText
             jcr:primaryType="nt:unstructured"
             sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
-            emptyText="(c) 2026 UDCP University. All rights reserved."
+            emptyText="© 2026 Campus Connect University. All rights reserved."
             fieldLabel="Copyright Text"
             name="./copyrightText"/>
     </items>

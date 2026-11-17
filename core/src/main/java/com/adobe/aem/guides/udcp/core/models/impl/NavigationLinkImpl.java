@@ -19,6 +19,9 @@ public class NavigationLinkImpl implements NavigationLink {
  
     @ValueMapValue
     private String link;
+
+    @ValueMapValue
+    private String parentLabel;
  
     @Override
     public String getLabel() {
@@ -28,5 +31,10 @@ public class NavigationLinkImpl implements NavigationLink {
     @Override
     public String getLink() {
         return link;
+    }
+
+    @Override
+    public String getParentLabel() {
+        return parentLabel;
     }
 }

@@ -1,0 +1,29 @@
+<section class="course-catalog" data-course-catalog>
+    <header class="course-catalog__intro">
+        <h2 class="course-catalog__heading">${properties.heading}</h2>
+    </header>
+
+    <div class="course-catalog__controls">
+        <label class="course-catalog__search">
+            <span>Search courses</span>
+            <input type="search"
+                   data-course-catalog-search
+                   autocomplete="off"
+                   placeholder="Search by course, school, or keyword" />
+        </label>
+
+        <label class="course-catalog__school" for="school-filter">
+            <span>Select School:</span>
+            <select id="school-filter" data-course-catalog-school>
+                <option value="Engineering">Engineering</option>
+                <option value="Management">Management</option>
+                <option value="Design">Design</option>
+            </select>
+        </label>
+    </div>
+
+    <p class="course-catalog__status" data-course-catalog-status role="status" aria-live="polite">
+        Loading courses...
+    </p>
+    <div class="course-catalog__items" data-course-catalog-items></div>
+</section>

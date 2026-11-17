@@ -1,1 +1,80 @@
-<h3> Header </h3>
+<sly data-sly-use.header="com.adobe.aem.guides.udcp.core.models.Header" />
+
+<div class="udcp-header">
+    <div class="udcp-header__layout">
+        <div class="udcp-header__brand">
+            <img data-sly-test="${header.logo}"
+                 class="udcp-header__logo"
+                 src="${header.logo @ context='uri'}"
+                 alt="Campus Connect University"
+                 width="56"
+                 height="56" />
+            <div class="udcp-header__brand-copy">
+                <p data-sly-test="${header.universityName}" class="udcp-header__name">${header.universityName}</p>
+                <p data-sly-test="${!header.universityName}" class="udcp-header__name">Campus Connect University</p>
+                <p data-sly-test="${header.tagline}" class="udcp-header__tagline">${header.tagline}</p>
+                <p data-sly-test="${!header.tagline}" class="udcp-header__tagline">Learn Beyond Limits. Lead Beyond Boundaries.</p>
+            </div>
+        </div>
+
+        <details class="udcp-header__menu">
+            <summary class="udcp-header__menu-toggle">
+                <span class="udcp-header__hamburger" aria-hidden="true"><span></span></span>
+                <span class="udcp-header__visually-hidden">Toggle navigation</span>
+            </summary>
+            <div class="udcp-header__navigation">
+                <nav data-sly-test="${header.navigationLinks}" class="udcp-header__nav" aria-label="Primary navigation">
+                    <ul class="udcp-header__nav-list" data-sly-list.item="${header.navigationLinks}">
+                        <li data-sly-test="${!item.parentLabel}" class="udcp-header__nav-item">
+                            <div class="udcp-header__nav-item-main">
+                                <details data-sly-test="${item.label == 'Academics'}" class="udcp-header__submenu">
+                                    <summary class="udcp-header__nav-link udcp-header__submenu-toggle" aria-label="Academics">
+                                        <span>Academics</span>
+                                    </summary>
+                                    <ul class="udcp-header__submenu-list" data-sly-list.subitem="${header.navigationLinks}">
+                                        <li data-sly-test="${subitem.parentLabel == item.label}" class="udcp-header__submenu-item">
+                                            <a data-sly-test="${subitem.link}"
+                                               class="udcp-header__submenu-link"
+                                               href="${subitem.link @ extension='html'}"
+                                               aria-current="${subitem.link == currentPage.path ? 'page' : ''}">${subitem.label}</a>
+                                            <span data-sly-test="${!subitem.link}" class="udcp-header__submenu-link">${subitem.label}</span>
+                                        </li>
+                                    </ul>
+                                </details>
+                                <a data-sly-test="${item.label != 'Academics' && item.link}"
+                                   class="udcp-header__nav-link"
+                                   href="${item.link @ extension='html'}"
+                                   aria-current="${item.link == currentPage.path ? 'page' : ''}">${item.label}</a>
+                                <span data-sly-test="${item.label != 'Academics' && !item.link}" class="udcp-header__nav-link">${item.label}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <sly data-sly-test="${!header.navigationLinks}"
+                     data-sly-resource="${'navigation' @ resourceType='udcp/components/navigation'}" />
+            </div>
+        </details>
+
+        <div class="udcp-header__actions">
+            <a data-sly-test="${header.signInLink}"
+               class="udcp-header__button udcp-header__button--outline"
+               href="${header.signInLink @ extension='html'}">Sign In</a>
+            <button data-sly-test="${!header.signInLink}"
+                    class="udcp-header__button udcp-header__button--outline"
+                    type="button"
+                    disabled>Sign In</button>
+            <a data-sly-test="${header.buttonLink}"
+               class="udcp-header__button udcp-header__button--primary"
+               href="${header.buttonLink @ extension='html'}">${header.buttonLabel || 'Join Our Community'}</a>
+            <button data-sly-test="${!header.buttonLink}"
+                    class="udcp-header__button udcp-header__button--primary"
+                    type="button"
+                    disabled>${header.buttonLabel || 'Join Our Community'}</button>
+
+            <div class="udcp-header__utilities">
+                <sly data-sly-resource="${'languagenavigation' @ resourceType='udcp/components/languagenavigation'}" />
+                <sly data-sly-resource="${'search' @ resourceType='udcp/components/search'}" />
+            </div>
+        </div>
+    </div>
+</div>

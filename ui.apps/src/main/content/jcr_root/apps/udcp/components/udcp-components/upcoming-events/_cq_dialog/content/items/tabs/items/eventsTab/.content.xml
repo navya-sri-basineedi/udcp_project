@@ -46,6 +46,13 @@
                         fieldLabel="Event Description"
                         name="./eventDescription"
                         rows="{Long}3"/>
+                    <eventLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="/libs/granite/ui/components/coral/foundation/form/textfield"
+                        emptyText="/content/udcp/us/en/udcp/event-page.html"
+                        fieldDescription="Optional page path or URL for the event details."
+                        fieldLabel="Event Details Link"
+                        name="./eventLink"/>
                 </items>
             </field>
         </events>

@@ -1,3 +1,4 @@
+
 package com.adobe.aem.guides.udcp.core.models.impl;
  
 import java.util.Collections;
@@ -16,6 +17,13 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
     adapters = Faculty.class,
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
+
+/**
+ * Sling Model implementation for the Faculty Component.
+ * Retrieves faculty profile information from Aem resources.
+ * 
+ * @author
+ */
 public class FacultyImpl implements Faculty {
  
     @ValueMapValue
@@ -39,31 +47,68 @@ public class FacultyImpl implements Faculty {
     @ChildResource(name = "facultyMembers")
     private List<Faculty> facultyMembers;
  
+   /**   (non-Javadoc)
+    * Returns the faculty members name.
+    * 
+    * @return faculty name
+    * @see com.adobe.aem.guides.udcp.core.models.Faculty#getFacultyName()
+    */
     @Override
     public String getFacultyName() {
         return facultyName;
     }
  
+    /**    (non-Javadoc)
+     * Returns the faculty members designation.
+     * 
+     * @return faculty designation
+     * @see com.adobe.aem.guides.udcp.core.models.Faculty#getDesignation()
+     */
     @Override
     public String getDesignation() {
         return designation;
     }
  
+    /**    (non-Javadoc)
+     * Returns the faculty members school.
+     * 
+     * @return faculty school
+     * @see com.adobe.aem.guides.udcp.core.models.Faculty#getSchool()
+     */
     @Override
     public String getSchool() {
         return school;
     }
- 
+
+    
+    /**    (non-Javadoc)
+     * Returns the faculty members photo.
+     * 
+     * @return faculty photo
+   
+     */
     @Override
     public String getFacultyPhoto() {
         return facultyPhoto;
     }
- 
+
+       /**    (non-Javadoc)
+     * Returns the faculty members qualifications.
+     * 
+     * @return faculty qualifications
+   
+     */
     @Override
     public String getQualifications() {
         return qualifications;
     }
  
+    /**    (non-Javadoc)
+     * Returns the faculty members bio.
+     * 
+     * @return faculty bio
+   
+     */
     @Override
     public String getBio() {
         return bio;

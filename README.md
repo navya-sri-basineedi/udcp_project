@@ -1,5 +1,6 @@
-# Sample AEM project template
+> CAMOUS CONNECT UNIVERSITY - Project
 
+# Sample AEM project template
 This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
 ## Modules
@@ -131,3 +132,55 @@ positive and safe to ignore.
 The project comes with the auto-public repository configured. To setup the repository in your Maven settings, refer to:
 
     http://helpx.adobe.com/experience-manager/kb/SetUpTheAdobeMavenRepository.html
+
+**Campus Connect University – AEM Sites Project**
+1. **Project Overview**
+Campus Connect University is a university website developed using Adobe Experience Manager (AEM) Sites. The website provides information about academics, faculty, campus life, events, admissions and courses.
+The project demonstrates the development of reusable AEM components, Sling Models, Touch UI dialogs and responsive website layouts.
+2. **Technologies Used**
+Adobe Experience Manager (AEM) 6.5
+Java
+Apache Maven
+HTL (HTML Template Language)
+HTML5 and CSS3
+JavaScript
+Sling Models
+JUnit 5
+AEM Mocks
+Git and GitHub
+GitHub Copilot
+3.**Project Structure**
+core: Contains Java Sling Models and backend logic.
+ui.apps: Contains AEM components, dialogs, HTL scripts and client libraries.
+ui.content: Contains content structures and sample website content.
+ui.config: Contains OSGi configuration files.
+all: Packages the project modules for deployment.
+4.** Website Features**
+Reusable Header and Footer components.
+Hero Banner component.
+Course Highlights component with composite multifield.
+Course Catalog with school-based filtering and GraphQL integration.
+Faculty Profiles with configurable faculty information.
+Events section with horizontally scrollable event cards.
+About Us, Academics, Campus Life and Visit Us pages.
+Sign In and Admission pages.
+5. **Build Instructions**
+Open a terminal at the project root directory and execute:
+mvn clean install
+6. **Deployment Instructions**
+To build and deploy the project to a local AEM instance, execute:
+mvn -pl ui.apps -am install -PautoInstallPackage
+Local AEM author instance:
+> http://localhost:4502
+7. **Testing**
+JUnit 5 and AEM Mocks are used to test Sling Models.
+The Faculty and Course Sling Model implementations have corresponding unit tests.
+To execute core module tests:
+mvn -pl core test
+8. **Configuration**
+The project uses AEM component dialogs to configure website content. Authors can manage component properties through the AEM authoring interface.
+OSGi configurations can be maintained in the ui.config module.
+9. **Website URL**
+> http://localhost:4502/content/udcp/us/en/udcp.html
+ 
+ 

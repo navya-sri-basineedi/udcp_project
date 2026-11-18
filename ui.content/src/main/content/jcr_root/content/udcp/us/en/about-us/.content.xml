@@ -18,8 +18,9 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="udcp/components/udcp-components/hero-banner"
                     backgroundImage="/content/dam/udcp/university.jpg"
-                    headline="About Campus Connect University"
-                    description="Empowering minds, inspiring innovation and shaping tomorrow's leaders."/>
+                    headline="Discover Your Future"
+                    description="Empowering minds, inspiring innovation and shaping tomorrow's leaders."
+                    variant="split"/>
                 <story
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="udcp/components/text"

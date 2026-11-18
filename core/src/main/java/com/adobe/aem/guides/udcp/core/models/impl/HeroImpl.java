@@ -13,6 +13,13 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
     resourceType = "/apps/udcp/components/udcp-components/hero-banner",
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
+
+/**
+ * Sling Model implementation for the Hero Component.
+ * Retrieves hero banner information from Aem resources.
+ * 
+ * @author
+ */
 public class HeroImpl implements Hero {
  
     @ValueMapValue
@@ -29,6 +36,9 @@ public class HeroImpl implements Hero {
  
     @ValueMapValue
     private String buttonLink;
+
+    @ValueMapValue
+    private String variant;
  
     @Override
     public String getBackgroundImage() {
@@ -53,6 +63,11 @@ public class HeroImpl implements Hero {
     @Override
     public String getButtonLink() {
         return buttonLink;
+    }
+
+    @Override
+    public String getVariant() {
+        return variant;
     }
 }
  

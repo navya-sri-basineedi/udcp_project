@@ -27,7 +27,7 @@
                     <ul class="udcp-header__nav-list" data-sly-list.item="${header.navigationLinks}">
                         <li data-sly-test="${!item.parentLabel}" class="udcp-header__nav-item">
                             <div class="udcp-header__nav-item-main">
-                                <details data-sly-test="${item.label == 'Academics'}" class="udcp-header__submenu">
+                                <details data-sly-test="${item.label == 'Academics' && !item.link}" class="udcp-header__submenu">
                                     <summary class="udcp-header__nav-link udcp-header__submenu-toggle" aria-label="Academics">
                                         <span>Academics</span>
                                     </summary>
@@ -41,7 +41,7 @@
                                         </li>
                                     </ul>
                                 </details>
-                                <a data-sly-test="${item.label != 'Academics' && item.link}"
+                                <a data-sly-test="${(item.label != 'Academics' || item.link) && item.link}"
                                    class="udcp-header__nav-link"
                                    href="${item.link @ extension='html'}"
                                    aria-current="${item.link == currentPage.path ? 'page' : ''}">${item.label}</a>

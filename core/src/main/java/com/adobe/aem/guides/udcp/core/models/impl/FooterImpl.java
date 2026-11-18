@@ -18,6 +18,13 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
     resourceType = "/apps/udcp/components/udcp-components/footer",
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
+
+/**
+ * Sling Model implementation for the Footer Component.
+ * Retrieves footer information from Aem resources.
+ * 
+ * @author
+ */
 public class FooterImpl implements Footer {
  
     @ValueMapValue

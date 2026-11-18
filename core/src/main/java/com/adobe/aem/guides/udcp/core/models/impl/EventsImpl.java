@@ -17,6 +17,13 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
     resourceType = "/apps/udcp/components/udcp-components/upcoming-events",
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
+
+/**
+ * Sling Model implementation for the Events Component.
+ * Retrieves event information from Aem resources.
+ * 
+ * @author
+ */
 public class EventsImpl implements Events {
  
     @ValueMapValue

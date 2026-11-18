@@ -30,7 +30,8 @@
                         label="About Us"/>
                     <item2
                         jcr:primaryType="nt:unstructured"
-                        label="Academics"/>
+                        label="Academics"
+                        link="/content/udcp/us/en/udcp"/>
                     <item4
                         jcr:primaryType="nt:unstructured"
                         label="Faculty"/>
@@ -43,22 +44,6 @@
                     <item7
                         jcr:primaryType="nt:unstructured"
                         label="Visit Us"/>
-                    <item8
-                        jcr:primaryType="nt:unstructured"
-                        label="All Courses"
-                        parentLabel="Academics"/>
-                    <item9
-                        jcr:primaryType="nt:unstructured"
-                        label="Engineering"
-                        parentLabel="Academics"/>
-                    <item10
-                        jcr:primaryType="nt:unstructured"
-                        label="Management"
-                        parentLabel="Academics"/>
-                    <item11
-                        jcr:primaryType="nt:unstructured"
-                        label="Design"
-                        parentLabel="Academics"/>
                 </navigationLinks>
                 <navigation
                     jcr:primaryType="nt:unstructured"

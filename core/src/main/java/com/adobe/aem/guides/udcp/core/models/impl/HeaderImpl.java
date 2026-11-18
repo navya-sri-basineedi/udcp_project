@@ -19,6 +19,13 @@ import org.apache.sling.models.annotations.injectorspecific.ChildResource;
     resourceType = "/apps/udcp/components/udcp-components/header",
     defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL
 )
+
+/**
+ * Sling Model implementation for the Header Component.
+ * Retrieves header information from Aem resources.
+ * 
+ * @author
+ */
 public class HeaderImpl implements Header {
  
     @ValueMapValue

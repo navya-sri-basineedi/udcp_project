@@ -11,4 +11,6 @@ public interface Hero {
     String getButtonLabel();
  
     String getButtonLink();
+
+    String getVariant();
 }

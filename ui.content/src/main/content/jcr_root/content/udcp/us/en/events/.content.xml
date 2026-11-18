@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Events"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Discover What's Happening"
+                    description="Explore events, celebrate creativity and connect with our university community."/>
+                <upcomingEvents
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/content-reference"
+                    referencePath="/content/udcp/us/en/udcp/jcr:content/root/container/upcoming_events"/>
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--events&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Event categories&lt;/p&gt;&lt;h2&gt;Something for every interest&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Academic Events&lt;/h3&gt;&lt;p&gt;Lectures, showcases and opportunities to share ideas.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Cultural Events&lt;/h3&gt;&lt;p&gt;Celebrations that bring creativity and campus traditions to life.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Sports Events&lt;/h3&gt;&lt;p&gt;Competitions and activities that encourage teamwork and participation.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Innovation Events&lt;/h3&gt;&lt;p&gt;Meetups and showcases focused on ideas, technology and enterprise.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Why participate?&lt;/p&gt;&lt;h2&gt;Connect, learn and contribute&lt;/h2&gt;&lt;p&gt;Events help students meet peers and mentors, discover new interests, learn beyond the classroom and contribute their creativity to university life.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-callout&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;h2&gt;Be Part of What's Happening&lt;/h2&gt;&lt;p&gt;Explore upcoming activities and find an event that interests you.&lt;/p&gt;&lt;a class=&quot;navigation-page-button&quot; href=&quot;/content/udcp/us/en/events.html#upcoming-events&quot;&gt;Explore Upcoming Events&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

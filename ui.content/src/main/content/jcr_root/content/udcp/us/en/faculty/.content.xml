@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Faculty"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Meet Our Faculty"
+                    description="Learn from experienced educators, researchers and mentors."/>
+                <introduction
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Faculty profiles&lt;/p&gt;&lt;h2&gt;Guidance that supports academic excellence&lt;/h2&gt;&lt;p&gt;Our faculty help students connect ideas with practice, grow their confidence and pursue academic excellence. Their mentorship supports learning, curiosity and the development of skills that continue beyond the classroom.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+                <facultyProfiles
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/content-reference"
+                    referencePath="/content/udcp/us/en/udcp/jcr:content/root/container/faculty_profile"/>
+                <additionalFacultyProfiles
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/content-reference"
+                    referencePath="/content/udcp/us/en/udcp/jcr:content/root/container/faculty_profile_574790105"/>
+                <expertise
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Academic expertise&lt;/p&gt;&lt;h2&gt;Knowledge across disciplines&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Engineering&lt;/h3&gt;&lt;p&gt;Technical foundations, emerging technologies and applied problem-solving.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Management&lt;/h3&gt;&lt;p&gt;Business strategy, leadership and financial decision-making.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Design&lt;/h3&gt;&lt;p&gt;Visual communication, creative practice and design thinking.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Faculty excellence&lt;/p&gt;&lt;h2&gt;Learning through mentorship and collaboration&lt;/h2&gt;&lt;p&gt;Faculty excellence is reflected in thoughtful mentorship, research, collaboration and practical education. Students are encouraged to ask questions, exchange perspectives and apply what they learn to meaningful challenges.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

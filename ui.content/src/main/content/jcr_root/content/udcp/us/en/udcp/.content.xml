@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="UDCP"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container">
+                <faculty_profile_574790105
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/faculty-profile">
+                    <facultyMembers jcr:primaryType="nt:unstructured">
+                        <item0
+                            jcr:primaryType="nt:unstructured"
+                            school="Management"
+                            designation="Professor"
+                            facultyName="Dr.Ananya Iyer"
+                            bio="Specializes in financial management and strategic marketing, developing analytical thinking and industry-ready professionals."
+                            facultyPhoto="/content/dam/udcp/faculty3.jpg"
+                            qualifications="Ph.D.Finance, MBA, Finance and Marketing"/>
+                        <item1
+                            jcr:primaryType="nt:unstructured"
+                            school="Design"
+                            designation="Associate Professor"
+                            facultyName="Prof. Vikram"
+                            bio="Specializes in digital media, visual communication and multimedia design, encouraging innovation and creative portfolios."
+                            facultyPhoto="/content/dam/udcp/faculty6.png"
+                            qualifications="M.Des Visual Communication, B.Des.Multimedia Design"/>
+                    </facultyMembers>
+                </faculty_profile_574790105>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

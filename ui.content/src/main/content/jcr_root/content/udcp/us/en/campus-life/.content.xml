@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Campus Life"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Experience Life Beyond Classrooms"
+                    description="Discover a vibrant campus filled with learning, creativity and opportunities."/>
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--campus-life&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Student activities&lt;/p&gt;&lt;h2&gt;Find your community&lt;/h2&gt;&lt;p&gt;Join student clubs and communities, take part in workshops and discover extracurricular activities that make space for new interests, shared ideas and lasting connections.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Sports and recreation&lt;/p&gt;&lt;h2&gt;Stay active and enjoy the campus&lt;/h2&gt;&lt;p&gt;Sports, fitness, friendly competitions and recreation give students opportunities to stay active, build teamwork and enjoy time together beyond their studies.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Arts and culture&lt;/p&gt;&lt;h2&gt;Celebrate creativity and expression&lt;/h2&gt;&lt;p&gt;Cultural celebrations, music, dance, art and student performances bring different perspectives together and create opportunities to share talent with the campus community.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Campus facilities&lt;/p&gt;&lt;h2&gt;Spaces for learning and connection&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid navigation-card-grid--facilities&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Modern Library&lt;/h3&gt;&lt;p&gt;A welcoming place to study, read and access learning resources.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Advanced Laboratories&lt;/h3&gt;&lt;p&gt;Practical spaces that support experimentation and hands-on learning.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Student Cafeteria&lt;/h3&gt;&lt;p&gt;A shared place to take a break and connect with other students.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Collaborative Learning Spaces&lt;/h3&gt;&lt;p&gt;Flexible settings for group projects, discussion and peer learning.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-callout&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;h2&gt;Make Campus Life Your Own&lt;/h2&gt;&lt;p&gt;Take part in campus activities, meet new people and find communities that share your interests.&lt;/p&gt;&lt;a class=&quot;navigation-page-button&quot; href=&quot;/content/udcp/us/en/events.html&quot;&gt;Explore Campus Events&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

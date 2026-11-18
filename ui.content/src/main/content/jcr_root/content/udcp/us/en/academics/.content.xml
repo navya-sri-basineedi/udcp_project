@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Academics"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Explore Our Academic Programs"
+                    description="Discover opportunities to learn, innovate and build your future."/>
+                <programs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--academics&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Academic schools&lt;/p&gt;&lt;h2&gt;Find the field that fits your ambitions&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid&quot;&gt;&lt;article class=&quot;navigation-card&quot; id=&quot;engineering&quot;&gt;&lt;h3&gt;School of Engineering&lt;/h3&gt;&lt;p&gt;Build technical foundations and explore emerging technologies through applied study and problem-solving.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot; id=&quot;management&quot;&gt;&lt;h3&gt;School of Management&lt;/h3&gt;&lt;p&gt;Develop business insight, leadership and decision-making skills for a changing professional world.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot; id=&quot;design&quot;&gt;&lt;h3&gt;School of Design&lt;/h3&gt;&lt;p&gt;Turn creative ideas into thoughtful visual communication and user-centred design work.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot; id=&quot;programs&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Featured programs&lt;/p&gt;&lt;h2&gt;Explore areas of study&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid navigation-card-grid--programs&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Artificial Intelligence&lt;/h3&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Computer Science&lt;/h3&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Data Science&lt;/h3&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Business Administration&lt;/h3&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Finance and Marketing&lt;/h3&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Graphic Design&lt;/h3&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Learning experience&lt;/p&gt;&lt;h2&gt;Knowledge put into practice&lt;/h2&gt;&lt;p&gt;Build understanding through hands-on projects, research, collaboration and opportunities to connect academic ideas with industry exposure. These experiences help students develop confidence and transferable skills alongside their subject knowledge.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+                <courseCatalog
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/content-reference"
+                    referencePath="/content/udcp/us/en/udcp/jcr:content/root/container/course_catalog"/>
+                <explore
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy&quot;&gt;&lt;section class=&quot;navigation-page-callout&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;h2&gt;Ready to explore your next step?&lt;/h2&gt;&lt;p&gt;Use the course catalog to search programs and find the options that match your interests.&lt;/p&gt;&lt;a class=&quot;navigation-page-button&quot; href=&quot;/content/udcp/us/en/academics.html#programs&quot;&gt;Explore Programs&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

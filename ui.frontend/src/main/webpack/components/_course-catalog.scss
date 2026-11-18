@@ -22,14 +22,14 @@
 
 .course-catalog__controls {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(13rem, 18rem);
+    grid-template-columns: minmax(0, 18rem);
     gap: 1rem;
     align-items: end;
+    justify-content: center;
     max-width: 75rem;
     margin: 0 auto 2rem;
 }
 
-.course-catalog__search,
 .course-catalog__school {
     display: flex;
     flex-direction: column;
@@ -39,7 +39,6 @@
     font-weight: 700;
 }
 
-.course-catalog__search input,
 .course-catalog__school select {
     width: 100%;
     min-height: 3rem;
@@ -53,12 +52,6 @@
     font-weight: 400;
 }
 
-.course-catalog__search input::placeholder {
-    color: #727C87;
-    opacity: 1;
-}
-
-.course-catalog__search input:focus-visible,
 .course-catalog__school select:focus-visible {
     outline: 2px solid #C5A66B;
     outline-offset: 2px;

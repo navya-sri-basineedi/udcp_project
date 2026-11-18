@@ -5,7 +5,6 @@
     var selectors = {
         component: "[data-course-catalog]",
         school: "[data-course-catalog-school]",
-        search: "[data-course-catalog-search]",
         status: "[data-course-catalog-status]",
         items: "[data-course-catalog-items]"
     };
@@ -110,23 +109,6 @@
         return article;
     }
 
-    function courseMatches(course, searchText) {
-        if (!searchText) {
-            return true;
-        }
-
-        var searchableValues = [
-            firstValue(course, ["courseName", "name", "title"]),
-            firstValue(course, ["school", "schoolName"]),
-            firstValue(course, ["duration"]),
-            firstValue(course, ["fees", "annualFees"]),
-            plainTextValue(course.description),
-            plainTextValue(course.eligibility)
-        ];
-
-        return searchableValues.join(" ").toLowerCase().indexOf(searchText) !== -1;
-    }
-
     function setStatus(status, message, isError) {
         status.hidden = false;
         status.textContent = message;
@@ -136,25 +118,16 @@
     function renderCatalog(component, state) {
         var status = component.querySelector(selectors.status);
         var items = component.querySelector(selectors.items);
-        var search = component.querySelector(selectors.search);
-        var searchText = search ? search.value.trim().toLowerCase() : "";
-        var courses;
+        var courses = state.courses;
 
         if (!status || !items || state.loading) {
             return;
         }
 
-        courses = state.courses.filter(function(course) {
-            return courseMatches(course, searchText);
-        });
         items.textContent = "";
 
         if (courses.length === 0) {
-            setStatus(
-                status,
-                searchText ? "No courses match your search." : "No courses are available for this school.",
-                false
-            );
+            setStatus(status, "No courses are available for this school.", false);
             return;
         }
 
@@ -233,7 +206,6 @@
             if (components[i].getAttribute("data-course-catalog-loaded") !== "true") {
                 var component = components[i];
                 var school = component.querySelector(selectors.school);
-                var search = component.querySelector(selectors.search);
                 var state = {
                     requestId: 0,
                     courses: [],
@@ -248,13 +220,6 @@
                             loadCatalog(currentComponent, currentSchool, currentState);
                         };
                     }(component, school, state));
-                }
-                if (search) {
-                    search.addEventListener("input", function(currentComponent, currentState) {
-                        return function() {
-                            renderCatalog(currentComponent, currentState);
-                        };
-                    }(component, state));
                 }
                 loadCatalog(component, school, state);
             }

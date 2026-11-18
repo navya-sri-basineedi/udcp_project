@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Sign In"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Welcome Back"
+                    description="Sign in to continue your Campus Connect University experience."/>
+                <signInContent
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--signin&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Your campus, your next step&lt;/p&gt;&lt;h2&gt;Sign In&lt;/h2&gt;&lt;p&gt;This frontend demonstration is not connected to an authentication service.&lt;/p&gt;&lt;div class=&quot;navigation-form-panel&quot;&gt;&lt;form class=&quot;navigation-form&quot; data-frontend-only-form=&quot;sign-in&quot;&gt;&lt;label class=&quot;navigation-form__field&quot; for=&quot;signin-email&quot;&gt;Email&lt;input id=&quot;signin-email&quot; name=&quot;email&quot; type=&quot;email&quot; autocomplete=&quot;email&quot; required&gt;&lt;/label&gt;&lt;label class=&quot;navigation-form__field&quot; for=&quot;signin-password&quot;&gt;Password&lt;input id=&quot;signin-password&quot; name=&quot;password&quot; type=&quot;password&quot; autocomplete=&quot;current-password&quot; required&gt;&lt;/label&gt;&lt;button class=&quot;navigation-form__submit&quot; type=&quot;submit&quot;&gt;Sign In&lt;/button&gt;&lt;div class=&quot;navigation-form__links&quot;&gt;&lt;a href=&quot;#forgot-password&quot;&gt;Forgot Password?&lt;/a&gt;&lt;a href=&quot;#create-account&quot;&gt;Create Account&lt;/a&gt;&lt;/div&gt;&lt;p class=&quot;navigation-form__status&quot; data-form-status role=&quot;status&quot; aria-live=&quot;polite&quot; hidden&gt;&lt;/p&gt;&lt;/form&gt;&lt;/div&gt;&lt;div class=&quot;navigation-card-grid navigation-card-grid--two&quot;&gt;&lt;article class=&quot;navigation-card&quot; id=&quot;forgot-password&quot;&gt;&lt;h3&gt;Forgot Password?&lt;/h3&gt;&lt;p&gt;Password recovery is not available because authentication has not been configured.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot; id=&quot;create-account&quot;&gt;&lt;h3&gt;Create Account&lt;/h3&gt;&lt;p&gt;Account creation is not available in this frontend-only demonstration.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

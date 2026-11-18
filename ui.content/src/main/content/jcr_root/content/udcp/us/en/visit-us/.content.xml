@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Visit Us"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="Visit Our Campus"
+                    description="Discover a welcoming environment designed for learning and growth."/>
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--visit&quot;&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Campus introduction&lt;/p&gt;&lt;h2&gt;A place to learn, connect and grow&lt;/h2&gt;&lt;p&gt;Campus Connect University offers a welcoming learning environment where students can explore ideas, collaborate with others and make the most of their university experience. Plan a visit to get a feel for the campus and its learning spaces.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot; id=&quot;contact-info&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Campus information&lt;/p&gt;&lt;h2&gt;Contact details&lt;/h2&gt;&lt;p&gt;The following contact information is sample placeholder content and is not official university information.&lt;/p&gt;&lt;div class=&quot;navigation-contact-grid&quot;&gt;&lt;article class=&quot;navigation-contact-card&quot;&gt;&lt;h3&gt;Address (sample)&lt;/h3&gt;&lt;p&gt;Campus address to be confirmed.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-contact-card&quot;&gt;&lt;h3&gt;Phone (sample)&lt;/h3&gt;&lt;p&gt;+1-000-000-0000&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-contact-card&quot;&gt;&lt;h3&gt;Email (sample)&lt;/h3&gt;&lt;p&gt;campus@example.invalid&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-contact-card&quot;&gt;&lt;h3&gt;Office hours (sample)&lt;/h3&gt;&lt;p&gt;Monday-Friday, 9:00 a.m.-5:00 p.m.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Campus facilities&lt;/p&gt;&lt;h2&gt;Explore our learning spaces&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Library&lt;/h3&gt;&lt;p&gt;Spaces for focused study, reading and research.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Laboratories&lt;/h3&gt;&lt;p&gt;Practical environments for exploration and hands-on work.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Classrooms&lt;/h3&gt;&lt;p&gt;Welcoming settings for teaching, discussion and learning.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Student Facilities&lt;/h3&gt;&lt;p&gt;Shared spaces that support everyday campus life.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-callout&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;h2&gt;Plan Your Visit&lt;/h2&gt;&lt;p&gt;Use the sample contact details above as a guide until official visitor information is provided.&lt;/p&gt;&lt;a class=&quot;navigation-page-button&quot; href=&quot;/content/udcp/us/en/visit-us.html#contact-info&quot;&gt;View Visit Information&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        jcr:title="About Us"
+        cq:template="/conf/udcp/settings/wcm/templates/udcp-campus-page"
+        sling:resourceType="udcp/components/page">
+        <root
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="udcp/components/container"
+            layout="responsiveGrid">
+            <container
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="udcp/components/container"
+                layout="responsiveGrid">
+                <hero
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/udcp-components/hero-banner"
+                    backgroundImage="/content/dam/udcp/university.jpg"
+                    headline="About Campus Connect University"
+                    description="Empowering minds, inspiring innovation and shaping tomorrow's leaders."/>
+                <story
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="udcp/components/text"
+                    textIsRich="{Boolean}true"
+                    text="&lt;div class=&quot;navigation-page-copy navigation-page-copy--about&quot;&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Our story&lt;/p&gt;&lt;h2&gt;Learning with purpose, preparing for what is next&lt;/h2&gt;&lt;p&gt;Campus Connect University is committed to quality education that connects strong academic foundations with practical learning. We encourage curiosity, innovation and responsible leadership, helping students develop the knowledge and confidence to contribute to their communities and chosen fields.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;What guides us&lt;/p&gt;&lt;h2&gt;Mission and Vision&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid navigation-card-grid--two&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Our Mission&lt;/h3&gt;&lt;p&gt;To provide accessible, industry-relevant education that develops knowledgeable, responsible and skilled graduates.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Our Vision&lt;/h3&gt;&lt;p&gt;To become a leading centre of learning and innovation that creates positive impact through education and research.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Why choose us?&lt;/p&gt;&lt;h2&gt;An education designed for growth&lt;/h2&gt;&lt;div class=&quot;navigation-card-grid&quot;&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Industry-Focused Learning&lt;/h3&gt;&lt;p&gt;Build practical skills through learning connected to current professional practice and real-world challenges.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Experienced Faculty&lt;/h3&gt;&lt;p&gt;Learn with educators who guide academic progress, critical thinking and personal development.&lt;/p&gt;&lt;/article&gt;&lt;article class=&quot;navigation-card&quot;&gt;&lt;h3&gt;Innovation and Research&lt;/h3&gt;&lt;p&gt;Explore ideas, ask meaningful questions and develop solutions through inquiry and collaboration.&lt;/p&gt;&lt;/article&gt;&lt;/div&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-section navigation-page-section--cream&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;p class=&quot;navigation-page-section__eyebrow&quot;&gt;Our achievements&lt;/p&gt;&lt;h2&gt;Progress shaped by our community&lt;/h2&gt;&lt;p&gt;We celebrate academic excellence, student development, research and the many contributions students make through clubs, creative work, service and extracurricular activities. Our focus remains on meaningful progress and the opportunities it creates for every learner.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;section class=&quot;navigation-page-callout&quot;&gt;&lt;div class=&quot;navigation-page-inner&quot;&gt;&lt;h2&gt;Be Part of Our Community&lt;/h2&gt;&lt;p&gt;Discover the people, learning and opportunities that make Campus Connect University a place to grow.&lt;/p&gt;&lt;a class=&quot;navigation-page-button&quot; href=&quot;/content/udcp/us/en/udcp/admissions.html&quot;&gt;Join Our Community&lt;/a&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;"/>
+            </container>
+        </root>
+    </jcr:content>
+</jcr:root>

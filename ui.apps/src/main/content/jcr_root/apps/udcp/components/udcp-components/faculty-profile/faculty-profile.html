@@ -1,6 +1,7 @@
 
 <sly data-sly-template.facultyCard="${ @ profile }">
     <article class="faculty-profile__card">
+        
         <div class="faculty-image" data-sly-test="${profile.facultyPhoto}">
             <img src="${profile.facultyPhoto}"
                  alt="${profile.facultyName}"
@@ -23,16 +24,18 @@
 <sly data-sly-use.faculty="com.adobe.aem.guides.udcp.core.models.Faculty" />
 
 <section class="faculty-profile">
-   
+    <div class="faculty-profile__intro faculty-profile__intro--scrolling">
+        <h2 class="faculty-profile__heading">Meet Our Faculty</h2>
+    </div>
 
     <div class="faculty-profile__cards"
          data-sly-test="${faculty.composite}"
          role="region"
          aria-label="Faculty profiles"
          tabindex="0">
-        <div class="faculty-profile aem-GridColumn" data-sly-list.profile="${faculty.facultyMembers}">
+        <sly data-sly-list.profile="${faculty.facultyMembers}">
             <sly data-sly-call="${facultyCard @ profile=profile}"></sly>
-        </div>
+        </sly>
     </div>
 
     <sly data-sly-test="${!faculty.composite}">
